@@ -19,12 +19,12 @@ glabel func_80240518_EA0E18
 /* EA0E34 80240534 F7B40028 */  sdc1      $f20, 0x28($sp)
 /* EA0E38 80240538 8C900148 */  lw        $s0, 0x148($a0)
 /* EA0E3C 8024053C 86040008 */  lh        $a0, 8($s0)
-/* EA0E40 80240540 0C00F92F */  jal       func_8003E4BC
+/* EA0E40 80240540 0C00F92F */  jal       dead_get_npc_unsafe
 /* EA0E44 80240544 24110001 */   addiu    $s1, $zero, 1
 /* EA0E48 80240548 86040008 */  lh        $a0, 8($s0)
 /* EA0E4C 8024054C 0040802D */  daddu     $s0, $v0, $zero
-/* EA0E50 80240550 3C05800C */  lui       $a1, %hi(D_800B8D80)
-/* EA0E54 80240554 24A58D80 */  addiu     $a1, $a1, %lo(D_800B8D80)
+/* EA0E50 80240550 3C05800C */  lui       $a1, %hi(dead_gCameras)
+/* EA0E54 80240554 24A58D80 */  addiu     $a1, $a1, %lo(dead_gCameras)
 /* EA0E58 80240558 3C03800A */  lui       $v1, %hi(D_800A158C)
 /* EA0E5C 8024055C 8463158C */  lh        $v1, %lo(D_800A158C)($v1)
 /* EA0E60 80240560 00912021 */  addu      $a0, $a0, $s1
@@ -59,7 +59,7 @@ glabel func_80240518_EA0E18
 /* EA0ED0 802405D0 4481A000 */  mtc1      $at, $f20
 /* EA0ED4 802405D4 0C00ABC6 */  jal       func_8002AF18
 /* EA0ED8 802405D8 00000000 */   nop
-/* EA0EDC 802405DC 0C00AB85 */  jal       func_8002AE14
+/* EA0EDC 802405DC 0C00AB85 */  jal       dead_clamp_angle
 /* EA0EE0 802405E0 46000306 */   mov.s    $f12, $f0
 /* EA0EE4 802405E4 3C018024 */  lui       $at, %hi(D_80246480_EA6D80)
 /* EA0EE8 802405E8 D4226480 */  ldc1      $f2, %lo(D_80246480_EA6D80)($at)
